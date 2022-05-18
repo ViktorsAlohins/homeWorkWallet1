@@ -1,6 +1,6 @@
 rootProject.name = 'homeWorkWallet'
 
-include 'public application'
-include 'secure application'
+include 'public-application'
+include 'secure-application'
 include 'library'
 
