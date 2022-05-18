@@ -1,31 +1,32 @@
-import org.springframework.boot.gradle.plugin.SpringBootPlugin
-
 plugins {
-    id 'org.springframework.boot' version '2.6.3' apply false
+    id 'org.springframework.boot' version '2.6.3'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'idea'
 }
 
-apply plugin: "io.spring.dependency-management"
-
-group = 'com.example'
+group 'com.homeworkwallet'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
 }
 
-dependencyManagement {
-    imports {
-        mavenBom SpringBootPlugin.BOM_COORDINATES
-    }
-}
-
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    annotationProcessor group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
 }
 
+test {
+    useJUnitPlatform()
+}
 
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
