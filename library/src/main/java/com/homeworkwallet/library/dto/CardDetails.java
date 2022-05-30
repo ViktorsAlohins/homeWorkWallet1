@@ -12,4 +12,16 @@ public class CardDetails {
         this.name = name;
         this.lastName = lastName;
     }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }
