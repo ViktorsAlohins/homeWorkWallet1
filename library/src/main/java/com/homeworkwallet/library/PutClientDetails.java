@@ -4,15 +4,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class PutClientDetails {
-    public static void main(String[] args) {
+public interface PutClientDetails {
 
-        MessagingService messagingService = new MessagingService();
-
-        messagingService.setName("John");
-        messagingService.setLastName("Cooper");
-        messagingService.setCardNumber(5478172389123859l);
-        messagingService.setId(1);
-
-    }
+        String clientName();
+        String clientLastName();
+        int clientId();
+        long clientCardNumber();
 }

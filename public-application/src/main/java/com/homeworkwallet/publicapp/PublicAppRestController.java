@@ -23,6 +23,6 @@ public class PublicAppRestController {
 
     @GetMapping
     public String get() {
-        return putClientDetails + messagingService.getClientInfo() + removeClientDetails.remove() + updateClientDetails.updated();
+        return messagingService.clientName() + messagingService.clientLastName() +messagingService.clientId() + messagingService.clientCardNumber() + removeClientDetails.remove() + updateClientDetails.updated();
     }
 }
