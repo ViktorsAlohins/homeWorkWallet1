@@ -1,6 +1,6 @@
 package com.homeworkwallet.secureapp;
 
-import com.homeworkwallet.library.MessagingService;
+import com.homeworkwallet.library.messaging.MessagingService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +17,6 @@ public class SecureAppRestController {
 
     @GetMapping
     public String get() {
-        return messagingService.sendMessage();
+        return "mock";
     }
 }
