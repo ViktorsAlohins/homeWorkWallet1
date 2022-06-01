@@ -1,6 +1,7 @@
-package com.homeworkwallet.publicapp;
+package com.homeworkwallet.publicapp.rest;
 
 import com.homeworkwallet.library.dto.CardDetails;
+import com.homeworkwallet.publicapp.service.CardService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

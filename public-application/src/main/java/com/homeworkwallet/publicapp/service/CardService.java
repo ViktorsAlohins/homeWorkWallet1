@@ -1,4 +1,4 @@
-package com.homeworkwallet.publicapp;
+package com.homeworkwallet.publicapp.service;
 
 import com.homeworkwallet.library.dto.CardDetails;
 import com.homeworkwallet.library.messaging.MessagingService;

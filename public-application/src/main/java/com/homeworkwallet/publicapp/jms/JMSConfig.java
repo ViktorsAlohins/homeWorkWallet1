@@ -1,4 +1,4 @@
-package com.homeworkwallet.publicapp.JMSConfiguration;
+package com.homeworkwallet.publicapp.jms;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;
