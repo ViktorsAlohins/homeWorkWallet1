@@ -14,26 +14,23 @@ public class CardService {
         this.messagingService = messagingService;
     }
 
-    public CardDetails createCardDetails() {
-        var mockResponse = new CardDetails("5105105105105100", "Pupka", "Vasin");
+    public CardDetails createCardDetails(CardDetails cardDetails) {
+        var mockResponse = new CardDetails(cardDetails.getCardNumber(), cardDetails.getName(), cardDetails.getLastName());
         return mockResponse;
     }
 
     public CardDetails getCardDetailsByNumber(String cardNumber) {
-/*         here in future you will call messaging service with some route, passing some data and returning some data back to you. This is just mock
-         while this isn't implemented yet.*/
         var mockResponse = new CardDetails("5105105105105100", "Vasja", "Pupkin");
-
         return mockResponse;
     }
 
-    public CardDetails updateCardDetails(String cardNumber, String name, String lastName) {
-        var updatedMockResponse = new CardDetails("50511337228814488", "Petja", "Popkin");
-        return updatedMockResponse;
+    public CardDetails updateCardDetails(CardDetails cardDetails) {
+        var mockResponse = new CardDetails(cardDetails.getCardNumber(), cardDetails.getName(), cardDetails.getLastName());
+        return mockResponse;
     }
 
-    public CardDetails deletedUser(boolean isUserDeleted) {
-        var deletedMockResponse = new CardDetails("0", "0", "0");
+    public CardDetails deleteUser(String cardNumber) {
+        var deletedMockResponse = new CardDetails(cardNumber, "Vasja", "Pupkin");
         return deletedMockResponse;
     }
 }

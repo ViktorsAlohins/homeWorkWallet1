@@ -34,12 +34,12 @@ public class PublicAppRestController {
 
     @DeleteMapping
     public CardDetails delete(@RequestParam(name = "cardNumber") String cardNumber) {
-        return cardService.deletedUser(true);
+        return cardService.deleteUser(cardNumber);
     }
 
     @PostMapping
-    public CardDetails update(@RequestBody CardDetails cardDetails, String cardNumber, String name, String lastName)  {
-        return cardService.updateCardDetails(cardNumber, name, lastName);
+    public CardDetails update(@RequestBody CardDetails cardDetails)  {
+        return cardService.updateCardDetails(cardDetails);
         }
 
     @GetMapping
