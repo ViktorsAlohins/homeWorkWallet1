@@ -1,10 +1,7 @@
 package com.homeworkwallet.publicapp;
 
 import com.homeworkwallet.library.dto.CardDetails;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("public")
@@ -29,6 +26,21 @@ public class PublicAppRestController {
     - each of those request should return something (created/updated/deleted instance as response)
     - response should be mocked for now, while you haven't implemented it yet (as in CardService#getCardDetailsByNumber now)
     */
+
+    @PutMapping
+    public CardDetails create(@RequestBody CardDetails cardDetails) {
+        return cardService.createCardDetails(cardDetails);
+    }
+
+    @DeleteMapping
+    public CardDetails delete(@RequestParam(name = "cardNumber") String cardNumber) {
+        return cardService.deletedUser(true);
+    }
+
+    @PostMapping
+    public CardDetails update(@RequestBody CardDetails cardDetails, String cardNumber, String name, String lastName)  {
+        return cardService.updateCardDetails(cardNumber, name, lastName);
+        }
 
     @GetMapping
     public CardDetails get(@RequestParam(name = "cardNumber") String cardNumber) {
